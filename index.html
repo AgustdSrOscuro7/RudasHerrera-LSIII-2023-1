@@ -1,7 +1,78 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LungHealth: Herramienta Prototipo para el Seguimiento Clínico de Pacientes Pulmonares</title>
+    <title>Document</title>
+    <style>
+        
+        body{
+            background-image: url(assets/doctores.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+        }
+        .card-container {
+            display: flex; /* Utilizar flexbox para los elementos internos */
+            justify-content: space-between; /* Espaciado uniforme entre las tarjetas */
+        }
+        .card {
+            background-color: #5e6263;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 400px;
+            border-radius: 10%;
+        }
+
+        .card h2 {
+            color:rgb(212, 186, 36);
+            font-size: 25px;
+            text-shadow: 2px 2px 4px rgba(38, 37, 37, 0.5);
+        }
+        .card b{
+            color: aliceblue;
+        }
+        .cardDos{
+            background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+            border-radius: 10px; /* Borde redondeado */
+            padding: 20px; /* Espacio alrededor del contenido */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+            max-width: 300px; /* Ancho máximo de la tarjeta */
+            margin: 0 auto; /* Centrar horizontalmente */
+        }
+        .cardDos h2 {
+            color:rgb(0, 0, 0);
+            font-size: 25px;
+            text-shadow: 2px 2px 4px rgba(43, 6, 255, 0.5);
+            text-align: center;
+        }
+
+        /* Estilo para la lista con viñetas */
+        ul {
+            list-style-type: disc; /* Tipo de viñeta */
+            margin-left: 20px; /* Margen izquierdo para la lista */
+        }
+    </style>
 </head>
+<body>
+    <div class="card">
+        <h2>Tecnologia para mejora la atención a nuestros usuarios</h2>
+        <b>En la ciudad de Santiago de Cali, actualmente se busca realizar una herramienta prototipo, para  mejorar la gestión de diagnósticos pulmonares de los pacientes, para facilitar el seguimiento de los historiales clínicos que son manipulados por el cuerpo médico encargado. </b>
+    </div>
+    <br>
+    <div class="card-container">
+        <div class="cardDos">
+            <h2>Análisis</h2>
+            <p>La problemática en la gestión de historiales clínicos de pacientes con afecciones pulmonares en la ciudad de Santiago de Cali es un tema más cotidiano de lo que parece. La falta de herramientas tecnológicas específicas ha llevado a una ineficiencia en el registro, análisis y seguimiento de la salud pulmonar de los pacientes, lo que dificulta la toma de decisiones informadas por parte del personal médico y puede resultar en tratamientos ineficaces.
+            </p>
+        </div>
+        <div class="cardDos">
+            <h2>Como Objetivo</h2>
+            <p>Para abordar este problema, se propone desarrollar LungHealth, una herramienta para la gestión de pacientes orientada a la salud personal. Esta herramienta permitirá a los profesionales acceder a datos históricos, resultados de pruebas y otros detalles importantes. LungHealth también facilitará la planificación de tratamientos personalizados al analizar patrones a lo largo del tiempo.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
