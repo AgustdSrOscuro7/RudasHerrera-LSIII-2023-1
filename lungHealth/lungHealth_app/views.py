@@ -7,7 +7,10 @@ from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 
 def inicio(request):
-    return render(request, 'lungHealth/index.html')
+    return render(request, 'index.html')
+
+def login(request):
+    return render(request, 'login.html')
 
 # Vistas para Médicos
 class MedicoListado(ListView):

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login LungHealth</title>
+    <h1 class="tituloLogin">Login LungHealth</h1>
+    <style>
+        header {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+        .tituloLogin{
+            text-align: center;
+        }
+        h1 {
+            color: gold;
+            font-size: 35px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        body{
+            background-color: #949292;
+            background-image: url(../assets/doctores.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+        .fondFormulario{
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: fit-content;
+            margin: 0 auto;
+        }
+        .login-container {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f8ff; /* Azul claro */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .login-container label {
+            display: block;
+            margin-bottom: 8px;
+            color: gold; /* Color dorado */
+        }
+        
+        .login-container input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .login-container button {
+            background-color: #4caf50; /* Verde */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer{
+            margin-top: 20px;
+            background-color: #5e6263;
+            width: 100%;
+            height: 150px;
+            border-radius: 20px;
+        }
+        footer b{
+            color: aliceblue;
+            margin-left: 10px;
+        }
+        .person-info {
+            display: flex;
+            justify-content: space-evenly ;
+            color: aliceblue;
+        }
+        .person-info b{
+            color:rgb(212, 186, 36);
+            text-shadow: 2px 2px 4px rgba(38, 37, 37, 0.5);
+        }
+       .uni{
+        color:rgb(212, 186, 36);
+        text-shadow: 2px 2px 4px rgba(38, 37, 37, 0.5);
+       }
+       
+    </style>
+</head>
+<body>
+    
+    <div class="login-container">
+        <form method="post" action="{% url 'login' %}">
+            
+        <label for="id_username">Nombre de usuario:</label>
+        <input type="text" name="username" id="id_username" required placeholder="Nombre usuario">
+        
+        <label for="id_password">Contraseña:</label>
+        <input type="password" name="password" id="id_password" required placeholder="Contraseña">
+        <!-- <button type="submit">Entrar</button> -->
+        <a href="medico_crear.html" class="botonIngresar">Ingresar</a>
+        </form>
+    </div>
+</body>
+<footer>
+    <div class="person-info">
+        <div>
+            <h3>Valeria Rudas Ruiz</h3>
+            <b>Ingenieria de Sistemas-P1</b>
+        </div>
+        <div>
+            <h3>David Herrera Bermudez</h3>
+            <b>Ingenieria de Sistemas-P2</b>
+        </div>
+        <div>
+            <h3>Doctor Giovanny Hidalgo</h3>
+            <b>Doctor Ingeniero de Sistemas</b>
+        </div>
+    </div>
+    <br>
+    <b>&copy; 2023 LungHealth - Todos los derechos reservados.</b>
+    <br>
+    <b class="uni">UNIVERSIDAD SAN BUENAVENTURA CALI</b>
+</footer>
+</html>
