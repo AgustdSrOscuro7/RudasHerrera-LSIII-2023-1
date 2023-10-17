@@ -56,3 +56,11 @@ python manage.py runserver
 
 
 9. Inicia sesión con el superusuario que creaste y comienza a utilizar la aplicación.
+
+
+# ESPECIFICACION DE RAMAS
+
+## Rama: Login
+- Creacion y ajuste de las vista inicial
+- Creacion de formulario del login
+- Redireccionamiento de la vista del login a la proxima vista que estará en la rama de "crud"
