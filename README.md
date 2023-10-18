@@ -58,13 +58,20 @@ python manage.py runserver
 9. Inicia sesión con el superusuario que creaste y comienza a utilizar la aplicación.
 
 
-# ESPECIFICACION DE RAMAS
+# ESPECIFICACION DE RAMAS Y CODIGO
 
-## Rama: Login
+## Rama: login
 - Creacion y ajuste de las vista inicial
 - Creacion de formulario del login
 - Redireccionamiento de la vista del login a la proxima vista que estará en la rama de "crud"
 
-## Rama: CRUD
+## Rama: crud
 - Creacion y ajuste de las vistas CRUD para el modelo Medico
 - Recepcion de redireccion del login a index
+
+
+## Rama: crudPacientes
+- Creacion y ajuste de las vistas CRUD para el modelo del Paciente
+- Pantalla para elegir modelos
+- Redireccion de elegir modelos, para pacientes y medicos
+

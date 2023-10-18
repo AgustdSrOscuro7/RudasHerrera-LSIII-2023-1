@@ -31,11 +31,11 @@ urlpatterns = [
     path('medicos/eliminar/<int:pk>/', MedicoEliminar.as_view(template_name="medicos/eliminar.html"), name='eliminar_medico'),
 
     # URLs para Pacientes
-    path('pacientes/', PacienteListado.as_view(template_name="paciente/index.html"), name='leer_pacientes'),
-    path('pacientes/detalle/<int:pk>/', PacienteDetalle.as_view(template_name="pacientes/detalles.html"), name='detalles_paciente'),
-    path('pacientes/crear/', PacienteCrear.as_view(template_name="pacientes/crear.html"), name='crear_paciente'),
-    path('pacientes/editar/<int:pk>/', PacienteActualizar.as_view(template_name="pacientes/actualizar.html"), name='actualizar_paciente'),
-    path('pacientes/eliminar/<int:pk>/', PacienteEliminar.as_view(template_name="pacientes/eliminar.html"), name='eliminar_paciente'),
+    path('pacientes/', PacienteListado.as_view(template_name="pacientes/indexP.html"), name='leer_pacientes'),
+    path('pacientes/detalleP/<int:pk>/', PacienteDetalle.as_view(template_name="pacientes/detallesP.html"), name='detalles_paciente'),
+    path('pacientes/crearP/', PacienteCrear.as_view(template_name="pacientes/crearP.html"), name='crear_paciente'),
+    path('pacientes/editarP/<int:pk>/', PacienteActualizar.as_view(template_name="pacientes/actualizarP.html"), name='actualizar_paciente'),
+    path('pacientes/eliminarP/<int:pk>/', PacienteEliminar.as_view(template_name="pacientes/eliminarP.html"), name='eliminar_paciente'),
 
     # URLs para Diagnósticos
     path('diagnosticos/', DiagnosticoListado.as_view(template_name="diagnosticos/index.html"), name='leer_diagnosticos'),

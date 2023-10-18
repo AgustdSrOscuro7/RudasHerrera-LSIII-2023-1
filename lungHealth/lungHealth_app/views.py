@@ -46,6 +46,10 @@ class MedicoEliminar(SuccessMessageMixin, DeleteView):
         messages.success(self.request, success_message)
         return reverse('leer_medicos')
 
+
+
+
+
 # Vistas para Pacientes
 class PacienteListado(ListView):
     model = Paciente
@@ -76,6 +80,16 @@ class PacienteEliminar(SuccessMessageMixin, DeleteView):
         success_message = 'Paciente Eliminado Correctamente!'
         messages.success(self.request, success_message)
         return reverse('leer_pacientes')
+
+
+
+
+
+
+
+
+
+
 
 # Vistas para Diagnósticos
 class DiagnosticoListado(ListView):
