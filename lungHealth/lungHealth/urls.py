@@ -37,6 +37,18 @@ urlpatterns = [
     path('pacientes/editarP/<int:pk>/', PacienteActualizar.as_view(template_name="pacientes/actualizarP.html"), name='actualizar_paciente'),
     path('pacientes/eliminarP/<int:pk>/', PacienteEliminar.as_view(template_name="pacientes/eliminarP.html"), name='eliminar_paciente'),
 
+
+
+
+
+
+
+
+
+
+
+
+
     # URLs para Diagnósticos
     path('diagnosticos/', DiagnosticoListado.as_view(template_name="diagnosticos/index.html"), name='leer_diagnosticos'),
     path('diagnosticos/detalle/<int:pk>/', DiagnosticoDetalle.as_view(template_name="diagnosticos/detalles.html"), name='detalles_diagnostico'),
