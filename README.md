@@ -64,3 +64,4 @@ python manage.py runserver
 - Creacion y ajuste de las vista inicial
 - Creacion de formulario del login
 - Redireccionamiento de la vista del login a la proxima vista que estará en la rama de "crud"
+
