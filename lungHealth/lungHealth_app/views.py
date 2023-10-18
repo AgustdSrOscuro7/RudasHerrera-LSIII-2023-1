@@ -12,6 +12,9 @@ def inicio(request):
 def login(request):
     return render(request, 'login.html')
 
+def elegirModelos(request):
+    return render(request, 'elegirModelos.html')
+
 # Vistas para Médicos
 class MedicoListado(ListView):
     model = Medico

@@ -128,7 +128,12 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/medicos/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'medicos/static/uploads')
 
+MEDIA_URL = '/pacientes/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'pacientes/static/uploads')
+
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

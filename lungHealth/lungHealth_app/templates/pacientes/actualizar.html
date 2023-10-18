@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Paciente</title>
+    
+    <!-- Carga de librerías -->
+    {% load bootstrap4 %}
+    {% load widget_tweaks %}
+    {% load static %}
+    
+    <!-- Carga de CSS Bootstrap -->
+    {% bootstrap_css %}
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Paciente</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="nombre" class="txt_negrita">Nombre</label>
+                {{ form.nombre|add_class:"form-control" }}
+            </div>
+            
+            <div class="form-group">
+                <label for="apellido" class="txt_negrita">Apellido</label>
+                {{ form.apellido|add_class:"form-control" }}
+            </div>
+            
+            <div class="form-group">
+                <label for="fecha_nacimiento" class="txt_negrita">Fecha de Nacimiento</label>
+                {{ form.fecha_nacimiento|add_class:"form-control" }}
+            </div>
+            
+            <div class="form-group">
+                <label for="numero_seguro_social" class="txt_negrita">Número de Seguro Social</label>
+                {{ form.numero_seguro_social|add_class:"form-control" }}
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+            <a href="{% url 'leer_pacientes' %}" class="btn btn-primary">Volver</a>
+        </form>
+    </div>
+    
+    <!-- Carga de JavaScript de Bootstrap si es necesario -->
+    {% bootstrap_javascript %}
+</body>
+</html>

@@ -1,0 +1,53 @@
+<head>
+    {# Cargamos la librería Bootstrap #} 
+    {% load bootstrap4 %} 
+
+    {# CSS Bootstrap #} 
+    {% bootstrap_css %}
+    
+    {# Archivos estáticos #}
+    {% load static %}
+
+</head>
+
+<body>
+    <div align="left" class="btn_crear mb-3">
+        <a href="crear" type="button" class="btn btn-primary">Crear</a>
+    </div>
+
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th width="35%">Nombre</th>
+                <th>Apellido</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Número de Seguro Social</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Recorremos los objetos o registros que tenemos en nuestra tabla 'pacientes' y los listamos -->
+            {% for paciente in object_list %}
+            <tr>
+                <td>{{ paciente.nombre }}</td>
+                <td>{{ paciente.apellido }}</td>
+                <td>{{ paciente.fecha_nacimiento }}</td>
+                <td>{{ paciente.numero_seguro_social }}</td>
+        
+                <td>
+                    <form method="POST" action="eliminar/{{ paciente.id }}/">
+                        {% csrf_token %}
+                        <div class="btn-group">
+                            <a href="detalle/{{ paciente.id }}" title="Ver" type="button" class="btn btn-success">Ver</a>
+                            <a href="editar/{{ paciente.id }}" title="Editar" type="button" class="btn btn-primary">Editar</a>
+                            <button class="btn btn-danger" onclick="return eliminar();" type="submit">Eliminar</button>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {# JS y jQuery Bootstrap #}
+    {% bootstrap_javascript jquery='full' %} 
+</body>

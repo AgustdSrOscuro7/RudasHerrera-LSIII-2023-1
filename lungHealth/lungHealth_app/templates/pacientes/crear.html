@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Paciente</title>
+
+    <!-- Cargamos la librería Bootstrap -->
+    {% load bootstrap4 %} 
+    {% bootstrap_css %}
+
+    <!-- Cargamos la librería widget_tweaks -->
+    {% load widget_tweaks %}
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Paciente</h1>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="{{ form.nombre.id_for_label }}" class="col-form-label">Nombre*</label>
+                {{ form.nombre|add_class:"form-control" }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.apellido.id_for_label }}" class="col-form-label">Apellido*</label>
+                {{ form.apellido|add_class:"form-control" }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.fecha_nacimiento.id_for_label }}" class="col-form-label">Fecha de Nacimiento*</label>
+                {{ form.fecha_nacimiento|add_class:"form-control" }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.numero_seguro_social.id_for_label }}" class="col-form-label">Número de Seguro Social*</label>
+                {{ form.numero_seguro_social|add_class:"form-control" }}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+            <a href="{% url 'leer_pacientes' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+
+    <!-- Cargamos JavaScript de Bootstrap si es necesario -->
+    {% bootstrap_javascript %} 
+</body>
+</html>

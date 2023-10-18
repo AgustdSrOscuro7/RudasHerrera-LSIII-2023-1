@@ -7,7 +7,7 @@ from lungHealth_app.views import (
     PacienteListado, PacienteDetalle, PacienteCrear, PacienteActualizar, PacienteEliminar,
     DiagnosticoListado, DiagnosticoDetalle, DiagnosticoCrear, DiagnosticoActualizar, DiagnosticoEliminar,
     TratamientoListado, TratamientoDetalle, TratamientoCrear, TratamientoActualizar, TratamientoEliminar,
-    HospitalListado, HospitalDetalle, HospitalCrear, HospitalActualizar, HospitalEliminar,
+    HospitalListado, HospitalDetalle, HospitalCrear, HospitalActualizar, HospitalEliminar
 )
 
 urlpatterns = [
@@ -18,6 +18,9 @@ urlpatterns = [
     
     #ENTRAR A LOGIN:
     path('login/', views.login, name='login'),
+    
+    #ELEGIR MODELOS SEGUN SE DESEE
+    path('elegirModelos/', views.elegirModelos, name='elegirModelos'),
     
     # URLs para Médicos
     path('admin/', admin.site.urls),
