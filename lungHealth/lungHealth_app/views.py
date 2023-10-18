@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Medico, Paciente, Diagnostico, Tratamiento, PruebaMedica, NotaEnfermeria, Hospital
+from .models import Medico, Paciente, Diagnostico, Tratamiento, Hospital
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse
