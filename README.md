@@ -65,3 +65,6 @@ python manage.py runserver
 - Creacion de formulario del login
 - Redireccionamiento de la vista del login a la proxima vista que estará en la rama de "crud"
 
+## Rama: CRUD
+- Creacion y ajuste de las vistas CRUD para el modelo Medico
+- Recepcion de redireccion del login a index
