@@ -125,8 +125,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_URL = '/arepas/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'arepas/static/uploads')
+MEDIA_URL = '/medicos/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'medicos/static/uploads')
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 

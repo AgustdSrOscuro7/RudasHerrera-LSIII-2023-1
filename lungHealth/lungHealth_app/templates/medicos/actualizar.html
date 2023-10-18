@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Médico</title>
+    <!-- Carga de librerías -->
+    {% load bootstrap4 %}
+    {% load widget_tweaks %}
+    {% load static %}
+    <!-- Carga de CSS Bootstrap -->
+    {% bootstrap_css %}
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Médico</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="nombre" class="txt_negrita">Nombre</label>
+                {{ form.nombre|add_class:"form-control" }}
+            </div>
+            <div class="form-group">
+                <label for="apellido" class="txt_negrita">Apellido</label>
+                {{ form.apellido|add_class:"form-control" }}
+            </div>
+            <div class="form-group">
+                <label for="especialidad" class="txt_negrita">Especialidad</label>
+                {{ form.especialidad|add_class:"form-control" }}
+            </div>
+            <div class="form-group">
+                <label for="hospital" class="txt_negrita">Hospital</label>
+                {{ form.hospital|add_class:"form-control" }}
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+            <a href="{% url 'leer_medicos' %}" class="btn btn-primary">Volver</a>
+        </form>
+    </div>
+    <!-- Carga de JavaScript de Bootstrap si es necesario -->
+    {% bootstrap_javascript %}
+</body>
+</html>

@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, reverse_lazy
 from django.views.generic import RedirectView
-from lungHealth.lungHealth_app import views
+from lungHealth_app import views
 from lungHealth_app.views import (
     MedicoListado, MedicoDetalle, MedicoCrear, MedicoActualizar, MedicoEliminar,
     PacienteListado, PacienteDetalle, PacienteCrear, PacienteActualizar, PacienteEliminar,
@@ -17,7 +17,7 @@ urlpatterns = [
     path('', views.inicio),
     
     #ENTRAR A LOGIN:
-    path('/login', views.login),
+    path('login/', views.login, name='login'),
     
     # URLs para Médicos
     path('admin/', admin.site.urls),

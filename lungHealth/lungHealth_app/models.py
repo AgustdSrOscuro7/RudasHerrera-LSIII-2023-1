@@ -5,7 +5,7 @@ class Medico(models.Model):
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     especialidad = models.CharField(max_length=100)
-    hospital = models.ForeignKey('Hospital', on_delete=models.CASCADE)
+    hospital = models.CharField(max_length=100)
     
 class Meta:
     db_table = 'medicos'
