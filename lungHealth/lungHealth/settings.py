@@ -131,14 +131,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'medicos/static/uploads')
 MEDIA_URL = '/pacientes/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'pacientes/static/uploads')
 
-MEDIA_URL = '/diagnosticos/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'diagnosticos/static/uploads')
-
 MEDIA_URL = '/tratamientos/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'tratamientos/static/uploads')
-
-MEDIA_URL = '/hospitales/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'hospitales/static/uploads')
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 
