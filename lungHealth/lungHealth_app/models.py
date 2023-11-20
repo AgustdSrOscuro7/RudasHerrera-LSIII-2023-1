@@ -14,20 +14,14 @@ class Paciente(models.Model):
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     fecha_nacimiento = models.DateField()
+    hospital = models.CharField(max_length=100)
     numero_seguro_social = models.CharField(max_length=20, unique=True)
+    diagnostico = models.CharField(max_length=1000)
     
 
 class Meta:
     db_table = 'pacientes'
 
-class Diagnostico(models.Model):
-    fecha_diagnostico = models.DateField()
-    descripcion = models.TextField()
-    resultados_pruebas = models.TextField()
-    paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE)
-
-class Meta:
-    db_table = 'diagnosticos'
 
 class Tratamiento(models.Model):
     fecha_inicio = models.DateField()
@@ -38,11 +32,3 @@ class Tratamiento(models.Model):
 
 class Meta:
     db_table = 'tratamientos'
-
-class Hospital(models.Model):
-    nombre = models.CharField(max_length=100)
-    direccion = models.TextField()
-    informacion_contacto = models.TextField()
-
-class Meta:
-    db_table = 'hospitales'
