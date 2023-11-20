@@ -1,0 +1,26 @@
+<head>
+    {# Cargamos la librería Bootstrap #} 
+    {% load bootstrap4 %} 
+  
+    {# CSS Bootstrap #} 
+    {% bootstrap_css %} 
+
+    {# Widget Tweaks #}
+    {% load widget_tweaks %}
+
+    {# Archivos #}
+    {% load static %} <!-- STATIC_URL -->
+</head>
+
+<body>
+    <h4>Detalles del Tratamiento</h4>
+
+    <p><span class="txt_negrita">Fecha de Inicio:</span> <br> {{ object.fecha_inicio }}</p>
+    <p><span class="txt_negrita">Medicamentos Recetados:</span> <br> {{ object.medicamentos_recetados }}</p>
+    <p><span class="txt_negrita">Dosificación:</span> <br> {{ object.dosificacion }}</p>
+    <p><span class="txt_negrita">Duración del Tratamiento:</span> <br> {{ object.duracion_tratamiento }}</p>
+
+
+    <!-- Botón para volver a la vista principal (Home) -->
+    <a href="{% url 'leer_tratamientos' %}" class="btn btn-primary">Volver</a>
+</body>
