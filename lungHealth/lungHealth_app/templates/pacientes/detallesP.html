@@ -1,5 +1,4 @@
 <head>
- 
     {# Cargamos la librería Bootstrap #} 
     {% load bootstrap4 %} 
   
@@ -11,18 +10,17 @@
 
     {# Archivos #}
     {% load static %} <!-- STATIC_URL -->
-  
 </head>
+
 <body>
-    <h4>Detalles</h4>
+    <h4>Detalles del Tratamiento</h4>
 
-        <p><span class="txt_negrita">Nombre:</span> <br> {{object.nombre}}</p>
-        <p><span class="txt_negrita">Apellido:</span> <br> {{object.apellido}}</p>
-        <p><span class="txt_negrita">Fecha de Nacimiento:</span> <br> {{object.fecha_nacimiento}}</p>
-        <p><span class="txt_negrita">Hospital:</span> <br> {{object.hospital}}</p>
-        <p><span class="txt_negrita">Número de Seguro Social:</span> <br> {{object.numero_seguro_social}}</p>
-        <p><span class="txt_negrita">Diagnostico:</span> <br> {{object.diagnostico}}</p>
+    <p><span class="txt_negrita">Fecha de Inicio:</span> <br> {{ object.fecha_inicio }}</p>
+    <p><span class="txt_negrita">Medicamentos Recetados:</span> <br> {{ object.medicamentos_recetados }}</p>
+    <p><span class="txt_negrita">Dosificación:</span> <br> {{ object.dosificacion }}</p>
+    <p><span class="txt_negrita">Duración del Tratamiento:</span> <br> {{ object.duracion_tratamiento }}</p>
 
-        <!-- Botón para volver a la vista principal (Home) -->
-        <a href="{% url 'leer_pacientes' %}" class="btn btn-primary">Volver</a>
+
+    <!-- Botón para volver a la vista principal (Home) -->
+    <a href="{% url 'leer_tratamientos' %}" class="btn btn-primary">Volver</a>
 </body>
