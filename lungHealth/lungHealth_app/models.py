@@ -14,9 +14,9 @@ class Paciente(models.Model):
     nombre = models.CharField(max_length=100)
     apellido = models.CharField(max_length=100)
     fecha_nacimiento = models.DateField()
-    hospital = models.CharField(max_length=100)
+    hospital = models.CharField(max_length=100, default='DEFAULT VALUE')
     numero_seguro_social = models.CharField(max_length=20, unique=True)
-    diagnostico = models.CharField(max_length=1000)
+    diagnostico = models.CharField(max_length=255, default='DEFAULT VALUE')
     
 
 class Meta:
