@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Tratamiento</title>
+
+    <!-- Carga de librerías -->
+    {% load bootstrap4 %}
+    {% load widget_tweaks %}
+    {% load static %}
+
+    <!-- Carga de CSS Bootstrap -->
+    {% bootstrap_css %}
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Tratamiento</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="{{ form.fecha_inicio.id_for_label }}">Fecha de Inicio</label>
+                {{ form.fecha_inicio|add_class:"form-control" }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.medicamentos.id_for_label }}">Medicamentos Recetados</label>
+                {{ form.medicamentos|add_class:"form-control" }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.dosificacion.id_for_label }}">Dosificación</label>
+                {{ form.dosificacion|add_class:"form-control" }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.duracion.id_for_label }}">Duración del Tratamiento</label>
+                {{ form.duracion|add_class:"form-control" }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.paciente.id_for_label }}">Paciente</label>
+                {{ form.paciente|add_class:"form-control" }}
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+            <a href="{% url 'leer_tratamientos' %}" class="btn btn-primary">Volver</a>
+        </form>
+    </div>
+
+    <!-- Carga de JavaScript de Bootstrap si es necesario -->
+    {% bootstrap_javascript %}
+</body>
+</html>

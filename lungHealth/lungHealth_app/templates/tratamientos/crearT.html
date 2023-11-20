@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Tratamiento</title>
+
+    <!-- Cargamos la librería Bootstrap -->
+    {% load bootstrap4 %} 
+    {% bootstrap_css %}
+
+    <!-- Cargamos la librería widget_tweaks -->
+    {% load widget_tweaks %}
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Tratamiento</h1>
+
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="{{ form.fecha_inicio.id_for_label }}" class="col-form-label">Fecha de Inicio*</label>
+                {{ form.fecha_inicio|add_class:"form-control" }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.medicamentos_recetados.id_for_label }}" class="col-form-label">Medicamentos Recetados*</label>
+                {{ form.medicamentos_recetados|add_class:"form-control" }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.dosificacion.id_for_label }}" class="col-form-label">Dosificación*</label>
+                {{ form.dosificacion|add_class:"form-control" }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.duracion_tratamiento.id_for_label }}" class="col-form-label">Duración del Tratamiento*</label>
+                {{ form.duracion_tratamiento|add_class:"form-control" }}
+            </div>
+
+            <!-- Puedes incluir el campo para seleccionar el paciente asociado al tratamiento -->
+            <div class="form-group">
+                <label for="{{ form.paciente.id_for_label }}" class="col-form-label">Paciente*</label>
+                {{ form.paciente|add_class:"form-control" }}
+            </div>
+
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+            <a href="{% url 'leer_tratamientos' %}" class="btn btn-secondary">Cancelar</a>
+        </form>
+    </div>
+
+    <!-- Cargamos JavaScript de Bootstrap si es necesario -->
+    {% bootstrap_javascript %} 
+</body>
+</html>

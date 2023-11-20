@@ -36,10 +36,10 @@ urlpatterns = [
     path('pacientes/eliminarP/<int:pk>/', PacienteEliminar.as_view(template_name="pacientes/eliminarP.html"), name='eliminar_paciente'),
     
     # URLs para Tratamientos
-    path('tratamientos/', TratamientoListado.as_view(template_name="tratamientos/index.html"), name='leer_tratamientos'),
-    path('tratamientos/detalle/<int:pk>/', TratamientoDetalle.as_view(template_name="tratamientos/detalles.html"), name='detalles_tratamiento'),
-    path('tratamientos/crear/', TratamientoCrear.as_view(template_name="tratamientos/crear.html"), name='crear_tratamiento'),
-    path('tratamientos/editar/<int:pk>/', TratamientoActualizar.as_view(template_name="tratamientos/actualizar.html"), name='actualizar_tratamiento'),
-    path('tratamientos/eliminar/<int:pk>/', TratamientoEliminar.as_view(template_name="tratamientos/eliminar.html"), name='eliminar_tratamiento')
+    path('tratamientos/', TratamientoListado.as_view(template_name="tratamientos/indexT.html"), name='leer_tratamientos'),
+    path('tratamientos/detalleT/<int:pk>/', TratamientoDetalle.as_view(template_name="tratamientos/detallesT.html"), name='detalles_tratamiento'),
+    path('tratamientos/crearT/', TratamientoCrear.as_view(template_name="tratamientos/crearT.html"), name='crear_tratamiento'),
+    path('tratamientos/editarT/<int:pk>/', TratamientoActualizar.as_view(template_name="tratamientos/actualizarT.html"), name='actualizar_tratamiento'),
+    path('tratamientos/eliminarT/<int:pk>/', TratamientoEliminar.as_view(template_name="tratamientos/eliminarT.html"), name='eliminar_tratamiento')
 
 ]

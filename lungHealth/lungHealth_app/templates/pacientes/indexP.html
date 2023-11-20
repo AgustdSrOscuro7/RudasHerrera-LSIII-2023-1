@@ -21,7 +21,9 @@
                 <th width="35%">Nombre</th>
                 <th>Apellido</th>
                 <th>Fecha de Nacimiento</th>
+                <th>Hospital</th>
                 <th>Número de Seguro Social</th>
+                <th>Diagnostico</th>
             </tr>
         </thead>
         <tbody>
@@ -31,7 +33,9 @@
                 <td>{{ paciente.nombre }}</td>
                 <td>{{ paciente.apellido }}</td>
                 <td>{{ paciente.fecha_nacimiento }}</td>
+                <td>{{ paciente.hospital }}</td>
                 <td>{{ paciente.numero_seguro_social }}</td>
+                <td>{{ paciente.diagnostico }}</td>
         
                 <td>
                     <form method="POST" action="eliminarP/{{ paciente.id }}/">

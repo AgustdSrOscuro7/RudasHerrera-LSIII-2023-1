@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,7 @@
     <b> Una Herramienta Prototipo para el Seguimiento del Historial Clínico de los Pacientes con Diagnósticos Pulmonares.</b>
     <br>
     <br>
+    {% load static %}
     <style>
         header {
             background-color: #333;
@@ -23,13 +25,13 @@
             font-size: 35px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        body{
+        body {
             background-color: #949292;
-            background-image: url(../assets/doctores.jpg);
+            background-image: url('{% static "lungHealth\lungHealth_app\assets\doctores.jpg" %}');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed; 
-        }
+        }        
         .card-container {
             display: flex;
             justify-content: space-between;

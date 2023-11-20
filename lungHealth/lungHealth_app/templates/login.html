@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login LungHealth</title>
     <h1 class="tituloLogin">Login LungHealth</h1>
+    {% load static %}
     <style>
         header {
             background-color: #333;
@@ -21,7 +22,7 @@
         }
         body{
             background-color: #949292;
-            background-image: url(../assets/doctores.jpg);
+            background-image: url('{% static "lungHealth\lungHealth_app\assets\doctores.jpg" %}');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
