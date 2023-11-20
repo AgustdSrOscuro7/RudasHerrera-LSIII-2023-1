@@ -28,7 +28,7 @@ class Tratamiento(models.Model):
     medicamentos_recetados = models.TextField()
     dosificacion = models.CharField(max_length=100)
     duracion_tratamiento = models.CharField(max_length=100)
-    paciente = models.ForeignKey(Paciente, on_delete=models.CASCADE)
+    paciente = models.CharField(max_length=100)
 
 class Meta:
     db_table = 'tratamientos'
